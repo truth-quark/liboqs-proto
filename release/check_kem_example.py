@@ -22,9 +22,9 @@ txt = soup.get_text()
 start_str = 'Below is a minimal example of a post-quantum key encapsulation implemented in liboqs (using the nist-branch).'
 start = txt.index(start_str)
 end = txt.index('To compile the above example in a POSIX-like environment')
-code = txt[start + len(start_str)+1:end] 
+code = txt[start + len(start_str)+1:end]
 
-dest_path = '/tmp/kem_code_example.c'
+dest_path = '/tmp/wiki_kem_code_example.c'
 with open(dest_path, 'w') as f:
 	f.write(code)
 
